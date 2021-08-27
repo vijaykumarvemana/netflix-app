@@ -1,11 +1,12 @@
 import { Navbar, Nav, NavDropdown} from "react-bootstrap"
 import NavrBar from "./NavBar.css"
+import logo from "../netflix_logo.png"
 
 const NavBar = () => {
 return(
 <>
 <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">NetFlix</Navbar.Brand>
+    <Navbar.Brand href="#home"><img src={logo} style={{width: '100px'}} /></Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link  className="text-white"href="#home">Home</Nav.Link>
       <Nav.Link className="text-white" href="#features">TV Shows</Nav.Link>
