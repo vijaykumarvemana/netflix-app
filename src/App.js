@@ -13,12 +13,12 @@ import MainpageB from './components/MainpageB';
 function App() {
   return (
     <div className="App">
+      <NavBar />
 
       <MainpageB />
 
-   <NavBar />
-    <div>
-    <Footer />
+    
+     <Footer />
     
 
     </div>

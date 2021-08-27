@@ -31,8 +31,8 @@ class MainpageB extends Component {
 
   render() {
     return (
-      <>
-        <Container className="mt-5">
+      <section className="bg-dark">
+        <Container className="py-5">
           <Row>
             {this.state.data.map((obj) => (
               <Col sm={6} md={3} lg={3} className="px-1 no-gutters mb-2">
@@ -57,7 +57,7 @@ class MainpageB extends Component {
         {/* {
             this.state.isSelected && <CommentArea movieId={this.props.obj.imdbID}/>
         } */}
-      </>
+      </section>
     );
   }
 }
