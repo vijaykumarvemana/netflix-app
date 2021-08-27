@@ -1,12 +1,11 @@
 import './App.css';
-// import SingleBook from './components/SingleBook';
-import BookList from './components/BookList';
-import movie from '../src/data/horror.json'
+
+import MainpageB from './components/MainpageB';
 
 function App() {
   return (
     <div className="App">
-      <BookList allBooks={movie} />
+      <MainpageB />
     </div>
   );
 }
