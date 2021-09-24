@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <NavBar />
 
-      <MainpageB />
+      <MainpageB title="Star Wars"  />
 
     
      <Footer />

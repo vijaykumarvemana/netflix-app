@@ -13,7 +13,7 @@ class MainpageB extends Component {
   componentDidMount = async () => {
     try {
       let response = await fetch(
-        "http://www.omdbapi.com/?apikey=829a56e3&s=titanic",
+        `http://www.omdbapi.com/?apikey=829a56e3&s="${this.props.title.toLowerCase()}"&type=movie&page=1`,
         {
           method: "GET",
         }
@@ -32,17 +32,19 @@ class MainpageB extends Component {
   render() {
     return (
       <section className="bg-dark">
+        
         <Container className="py-5">
+        <h2 className="mn-50">{this.props.title}</h2>
           <Row>
-            {this.state.data.map((obj) => (
-              <Col sm={6} md={3} lg={3} className="px-1 no-gutters mb-2">
+            {this.state.data.slice(0,6).map((obj) => (
+              <Col  className=" no-gutters mb-2">
                   {/* ^^^^^^^^^ */}
                 <Card>
                   <Card.Img onClick={()=> this.setState({isSelected: !this.state.isSelected})} key={obj.imdbID}
                     variant="top"
                     src={obj.Poster}
                     className="img-fluid"
-                    style={{ height: "25rem" }}
+            
                   />
                   {this.state.isSelected && <CommentArea movieId={obj.imdbID}/>}
                 </Card>
